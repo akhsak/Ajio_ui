@@ -1,4 +1,5 @@
-import 'package:ajio/bottombar.dart';
+
+import 'package:ajio/widgets/bottombar.dart';
 import 'package:flutter/material.dart';
 
 void main(){

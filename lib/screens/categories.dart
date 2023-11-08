@@ -6,7 +6,7 @@ class Categoriespage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      child: Text('cate'),
+      child: Center(child: Text('cate')),
     );
   }
 }
