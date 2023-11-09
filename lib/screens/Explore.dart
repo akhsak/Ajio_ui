@@ -9,7 +9,7 @@ class Explorepage extends StatelessWidget {
     return Scaffold(
       body:Column(
         children: [
-          BuildAppbar(),
+          buildAppbar(),
           SingleChildScrollView(
            scrollDirection:Axis.horizontal ,
           )

@@ -1,5 +1,6 @@
 
-import 'package:ajio/widgets/bottombar.dart';
+import 'package:ajio/home/scrrenhome.dart';
+//import 'package:ajio/widgets/bottombar.dart';
 import 'package:flutter/material.dart';
 
 void main(){
@@ -18,9 +19,6 @@ class _MyAppState extends State<MyApp> {
     return  MaterialApp(
       debugShowCheckedModeBanner: false,
         home:bottombar(),
-
       );
-    
-  
   }
 }
