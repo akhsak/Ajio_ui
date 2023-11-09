@@ -80,7 +80,7 @@ return  AppBar(
           ),
           IconButton(
               onPressed: () {},
-              icon: Icon(Icons.shopping_bag_sharp),
+              icon: Icon(Icons.shopping_bag_outlined),
               color: Color.fromARGB(255, 25, 21, 21)),
         ],
          );
@@ -109,7 +109,7 @@ Widget buildHomeScrollBar() {
             width: 12,
           ),
           CircleAvatar(
-            backgroundImage: AssetImage('asset/sale.png'),
+            backgroundImage: AssetImage('assets/sale.jpg'),
             radius: 15,
           ),
           SizedBox(
@@ -156,7 +156,7 @@ Widget buildHomeScrollBar() {
             width: 12,
           ),
           CircleAvatar(
-            backgroundImage: AssetImage('asset/kids.jpg'),
+            backgroundImage: AssetImage('assets/kids.jpg'),
             radius: 15,
           ),
           SizedBox(
@@ -171,7 +171,7 @@ Widget buildHomeScrollBar() {
             width: 12,
           ),
           CircleAvatar(
-            backgroundImage: AssetImage('asset/jewellry.jpg'),
+            backgroundImage: AssetImage('assets/jewellery.jpg'),
             radius: 15,
           ),
           SizedBox(
@@ -186,6 +186,7 @@ Widget buildHomeScrollBar() {
             width: 12,
           ),
           CircleAvatar(
+            backgroundImage: AssetImage('assets/footwear.jpg'),
             radius: 15,
           ),
           SizedBox(
@@ -199,6 +200,7 @@ Widget buildHomeScrollBar() {
             width: 12,
           ),
           CircleAvatar(
+            backgroundImage: AssetImage('assets/Beauty.jpg'),
             radius: 15,
           ),
           SizedBox(
@@ -213,6 +215,7 @@ Widget buildHomeScrollBar() {
             width: 12,
           ),
           CircleAvatar(
+            backgroundImage: AssetImage('assets/home.jpg'),
             radius: 15,
           ),
           SizedBox(

@@ -22,7 +22,6 @@ class _HomepageState extends State<Homepage> {
   @override
   Widget build(BuildContext context) {
      return Scaffold(
-      
       body: Column(
         children: [
          buildAppbar(),
@@ -63,6 +62,7 @@ class _HomepageState extends State<Homepage> {
                 },
               )),
         ],
+
       ),
     );
   }
@@ -74,8 +74,5 @@ class _HomepageState extends State<Homepage> {
           fit: BoxFit.fill,
         ),
          
-        //],
       );
-   // );
   }
-//}

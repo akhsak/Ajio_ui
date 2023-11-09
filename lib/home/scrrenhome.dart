@@ -1,15 +1,11 @@
 // ignore_for_file: prefer_const_literals_to_create_immutables, prefer_const_constructors
 
-//import 'package:ajio/screens/Acoount.dart';
-//import 'package:ajio/screens/TRNDin.dart';
 import 'package:ajio/screens/acoount.dart';
 import 'package:ajio/screens/explore.dart';
 import 'package:ajio/screens/trndin.dart';
 import 'package:ajio/screens/categories.dart';
 import 'package:ajio/screens/home.dart';
-//import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
-//import 'package:google_nav_bar/google_nav_bar.dart';
 
 class bottombar extends StatefulWidget {
   const bottombar({super.key});
