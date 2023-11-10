@@ -6,17 +6,27 @@ class Explorepage extends StatelessWidget {
 
  @override
   Widget build(BuildContext context) {
+   return Scaffold(
+      body: Column(
+        children: [
+          buildAppbar(),
+          SingleChildScrollView(
+            scrollDirection: Axis.horizontal,
+          )
+        ],
+      ),
+    );
    
-        return Column(
-  children: [
+  
+  
     
   
 
         
         
-  ],
+  
 
-);
+
   }
 }
       
