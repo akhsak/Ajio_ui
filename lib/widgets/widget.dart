@@ -1,7 +1,7 @@
 
 import 'package:flutter/material.dart';
 
-Widget buildAppbar(){
+ buildAppbar(){
 return  AppBar(
      elevation: 0,
         backgroundColor: Colors.white,

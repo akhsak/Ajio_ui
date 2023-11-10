@@ -54,6 +54,7 @@ class Categoriespage extends StatelessWidget {
                 
                 color: const Color.fromARGB(255, 235, 235, 235),
                 child: Container(
+                  
                   decoration: BoxDecoration(
                     border: Border.all(
                       color: Colors.grey,

@@ -28,22 +28,15 @@ class _HomepageState extends State<Homepage> {
           scrollDirection: Axis.horizontal,
          ),
          buildHomeScrollBar(),
-          SizedBox(
-            height: 20,
-          ),
+
           Container(
               width: double.infinity,
               height: 50,
-              child: Center(
-                child: Text(
-                  'HURRY! LAST 2 DAYS OF SALE',
-                  style: TextStyle(
-                      fontWeight: FontWeight.bold,
-                      color: Colors.white,
-                      fontSize: 20),
-                ),
+            child: 
+                Image.asset('assets/days.jpg'),
+                
               ),
-              color: Color.fromARGB(255, 6, 84, 103)),
+              
           CarouselSlider.builder(
               itemCount: carouselImage.length,
               itemBuilder: (context, index, realIndex) {
@@ -51,7 +44,7 @@ class _HomepageState extends State<Homepage> {
                 return buildImage(imagePath, index);
               },
               options: CarouselOptions(
-                height: 270,
+                height: 280,
                 autoPlay: true,
                 viewportFraction: 1,
                 onPageChanged: (index, reason) {
@@ -60,6 +53,32 @@ class _HomepageState extends State<Homepage> {
                   });
                 },
               )),
+              
+                Image.asset('assets/frnt.jpg'),
+                SingleChildScrollView(
+                  scrollDirection: Axis.horizontal,
+                  padding: EdgeInsets.only(
+                    left: 10,
+                    top: 2,
+                  ),
+                  
+                  child: Row(
+                    children: [
+                      Image.asset('assets/Rupay.jpg',height: 50,width: 200),
+                     Image.asset('assets/sbicard.jpg',height: 50,width: 200),
+                     Image.asset('assets/sbi.jpg',height: 50,width: 300),
+                     Image.asset('assets/AU.jpg',height: 50,width: 300),
+                      Image.asset('assets/idfc.jpg',height: 50,width: 300),
+                      Image.asset('assets/debit.jpg',height: 50,width: 300),
+                      Image.asset('assets/yesbank.jpg',height: 50,width: 300),
+                      Image.asset('assets/indsuld.jpg',height: 70,width: 300),
+                      Image.asset('assets/fi.jpg',height: 70,width: 300),
+                      Image.asset('assets/kwik.jpg',height: 70,width: 300),
+                      Image.asset('assets/payup.jpg',height: 70,width: 300)
+                    ],
+                  ),
+                   ), 
+                   Image.asset('assets/top.jpg',height: 70,width: 300,)            
         ],
 
       ),
