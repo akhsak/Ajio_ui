@@ -1,31 +1,4 @@
-// import 'package:flutter/foundation.dart';
-// import 'package:flutter/material.dart';
 
-// class homewidget extends StatelessWidget {
-//   const homewidget({super.key});
-
-//   @override
-//   Widget build(BuildContext context) {
-//     return Scaffold(
-
-      // ignore_for_file: prefer_const_literals_to_create_immutables, prefer_const_constructors, avoid_unnecessary_containers
-      
-//       body:SingleChildScrollView(
-//        child: Row(
-//         children: [
-//           SizedBox(
-//             width: 10,
-//           ),
-//           IconButton(onPressed: (){}, icon: Icon(Icons.home),color: Colors.black,),
-//           CircleAvatar(backgroundImage:
-//            NetworkImage('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS0i_qle6DMAZBx_J2WMDc0d94Lch1eaX7zbQ&usqp=CAU',),
-//            ),
-//         ],
-//        ),
-//       ) ,
-//     );
-//   }
-// }
 import 'package:flutter/material.dart';
 
 Widget buildAppbar(){

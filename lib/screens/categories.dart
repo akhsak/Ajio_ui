@@ -30,7 +30,7 @@ class Categoriespage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {  
     return  Scaffold(
-      appBar: AppBar(
+      appBar: AppBar(elevation: 0,
         title: Text('Shop By Category'),
         titleTextStyle: TextStyle(color: Colors.black),
         backgroundColor: Colors.white,
@@ -46,6 +46,7 @@ class Categoriespage extends StatelessWidget {
           GridView.builder(
             gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
               crossAxisCount: 2,
+              childAspectRatio: 2/1.2,
             ),
             itemBuilder: (context, index) {
               return Container(
@@ -56,19 +57,19 @@ class Categoriespage extends StatelessWidget {
                   decoration: BoxDecoration(
                     border: Border.all(
                       color: Colors.grey,
-                      width: 2.0,
+                      width: 0.5,
                     ),
-                    borderRadius: BorderRadius.circular(20),
+                    borderRadius: BorderRadius.circular(10),
                   ),
                   child: Center(
                     child: Column(
                       children: [
                         Image.asset(
                          images[index],
-                          width: 90,
-                          height: 90,
+                          width: 50,
+                          height: 50,
                         ),
-                        SizedBox(width: 20),
+                        SizedBox(width: 10),
                         Text(
                           Name[index],
                           style: TextStyle(
@@ -83,7 +84,7 @@ class Categoriespage extends StatelessWidget {
             },
           itemCount: images.length,
           ),
-           SizedBox(height: 10,),
+           SizedBox(height: 5,),
           Positioned(
             bottom: 0, 
             left: 0,
@@ -94,7 +95,7 @@ class Categoriespage extends StatelessWidget {
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
-                 Image.asset('assets/ajio_luxe.jpg',width: 390,)
+                 Image.asset('assets/ajio_luxe.jpg',width: 410,)
                 ],
               ),
             ),
