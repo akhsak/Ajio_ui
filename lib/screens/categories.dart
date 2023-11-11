@@ -53,33 +53,23 @@ class Categoriespage extends StatelessWidget {
                 margin: EdgeInsets.all(20),
                 
                 color: const Color.fromARGB(255, 235, 235, 235),
-                child: Container(
-                  
-                  decoration: BoxDecoration(
-                    border: Border.all(
-                      color: Colors.grey,
-                      width: 0.5,
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  children: [
+                    
+                    
+                    Text(
+                      Name[index],
+                      style: TextStyle(
+                        fontWeight: FontWeight.bold,
+                      ),
                     ),
-                    borderRadius: BorderRadius.circular(10),
-                  ),
-                  child: Center(
-                    child: Column(
-                      children: [
-                        Image.asset(
-                         images[index],
-                          width: 50,
-                          height: 50,
-                        ),
-                        SizedBox(width: 10),
-                        Text(
-                          Name[index],
-                          style: TextStyle(
-                            fontWeight: FontWeight.bold,
-                          ),
-                        )
-                      ],
+                    Image.asset(
+                     images[index],
+                      width: 50,
+                      height: 50,
                     ),
-                  ),
+                  ],
                 ),
               );
             },
