@@ -18,8 +18,6 @@ class _HomepageState extends State<Homepage> {
     'assets/IMG_9520-3.PNG',
     'assets/IMG_9519-4.PNG'
   ];
-
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -84,16 +82,13 @@ class _HomepageState extends State<Homepage> {
               scrollDirection: Axis.horizontal,
             child: Row(
               children: [
-                Image.asset('assets/1min.png'),
-                Image.asset('assets/min 1.png'),
-                Image.asset('assets/min3.png'),
-                Image.asset('assets/min4.png')
-
+                Image.asset('assets/1min.png',width: 250,),
+                Image.asset('assets/min 1.png',width: 250,),
+                Image.asset('assets/min3.png',width:250),
+                Image.asset('assets/min4.png',width: 250,)
               ],
             ),
-            ),
-           
-            
+            ),         
              Container(
                   child: Image.asset('assets/deals.png'),
 
@@ -114,14 +109,12 @@ class _HomepageState extends State<Homepage> {
                       activeindex = index;
                     });
                   },
-                )),
-               
+                )),          
           ],
         ),
       ),
     );
   }
-
   Widget buildImage(String imagepath, int index) => Container(
         color: Colors.grey,
         child: Image.asset(

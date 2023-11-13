@@ -55,9 +55,7 @@ class Categoriespage extends StatelessWidget {
                 color: const Color.fromARGB(255, 235, 235, 235),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                  children: [
-                    
-                    
+                  children: [   
                     Text(
                       Name[index],
                       style: TextStyle(
