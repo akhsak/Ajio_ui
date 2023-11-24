@@ -1,63 +1,72 @@
-
+import 'package:ajio/home/bag.dart';
+import 'package:ajio/home/notification.dart';
+import 'package:ajio/home/wishlist.dart';
 import 'package:flutter/material.dart';
-
- buildAppbar(){
-return  AppBar(
-     elevation: 0,
-        backgroundColor: Colors.white,
-        title: Container(
-          child: Row(
-            children: [
-              SizedBox(
-                width: 5,
-              ),
-              Image(
-                image: AssetImage('assets/ajio.png'),
-                width: 40,
-                height: 40,
-              ),
-              SizedBox(
-                width: 5,
-                
-              ),
-              Expanded(
-                child: TextField(
-                  decoration: InputDecoration(
-                      hintText: 'search by product,brand & more...',
-                      border: InputBorder.none),
-                ),
-              ),
-              Icon(
-                Icons.camera_alt_outlined,
-                color: Colors.black,
-              ),
-              SizedBox(
-                width: 5,
-              )
-            ],
+ buildAppbar( context) {
+  return AppBar(
+    elevation: 0,
+    backgroundColor: Colors.white,
+    title: Container(
+      child: Row(
+        children: [
+          SizedBox(
+            width: 5,
           ),
-        ),
-
-        titleTextStyle: TextStyle(color: Colors.black),
-
-        actions: [
-          IconButton(
-            onPressed: () {},
-            icon: Icon(Icons.notifications_none_outlined),
+          Image(
+            image: AssetImage('assets/ajio.png'),
+            width: 40,
+            height: 40,
+          ),
+          SizedBox(
+            width: 5,
+          ),
+          Expanded(
+            child: TextField(
+              decoration: InputDecoration(
+                  hintText: 'search by product,brand & more...',
+                  border: InputBorder.none),
+            ),
+          ),
+          Icon(
+            Icons.camera_alt_outlined,
             color: Colors.black,
           ),
-          IconButton(
-            onPressed: () {},
-            icon: Icon(Icons.favorite_outline_sharp),
-            color: Colors.black,
-          ),
-          IconButton(
-              onPressed: () {},
-              icon: Icon(Icons.shopping_bag_outlined),
-              color: Color.fromARGB(255, 25, 21, 21)),
+          SizedBox(
+            width: 5,
+          )
         ],
-         );
+      ),
+    ),
+    titleTextStyle: TextStyle(color: Colors.black),
+    actions: [
+      IconButton(
+        onPressed: () {
+          Navigator.push(context, MaterialPageRoute(builder: (context)=>NotificationScreen()));
+        },
+        icon: Icon(Icons.notifications_none_outlined),
+        color: Colors.black,
+      ),
+      IconButton(
+        onPressed: () {
+          Navigator.push(
+              context, MaterialPageRoute(builder: (context) => wishlist()));
+        },
+        icon: Icon(Icons.favorite_outline_sharp),
+        color: Colors.black,
+      ),
+      IconButton(
+         onPressed: () {
+          Navigator.push(context,(MaterialPageRoute(builder: (context)=>Bagpage())
+            
+          ));
+         },
+        icon: Icon(Icons.shopping_bag_outlined),
+        color: Colors.black,
+      ),
+    ],
+  );
 }
+
 Widget buildHomeScrollBar() {
   return Container(
     height: 50,
@@ -71,7 +80,8 @@ Widget buildHomeScrollBar() {
         ),
       ],
     ),
-    child: SingleChildScrollView(scrollDirection: Axis.horizontal,
+    child: SingleChildScrollView(
+      scrollDirection: Axis.horizontal,
       child: Row(
         children: [
           Icon(
@@ -166,7 +176,8 @@ Widget buildHomeScrollBar() {
             width: 5,
           ),
           Text("Footwear",
-              style: TextStyle(color: Colors.black,
+              style: TextStyle(
+                  color: Colors.black,
                   fontSize: 15,
                   fontWeight: FontWeight.w400)),
           SizedBox(

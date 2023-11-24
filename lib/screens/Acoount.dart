@@ -19,9 +19,9 @@ class Accountpage extends StatelessWidget {
     'Who We Are',
     'Join Our Team'
   ];
-  //  final screens = [
-  //   NotificationScreen(),
-  //  ];
+   final screens = [
+    NotificationScreen(),
+   ];
 
   @override
   Widget build(BuildContext context) {
@@ -87,9 +87,7 @@ class Accountpage extends StatelessWidget {
                             context,
                             MaterialPageRoute(
                                 builder: ((context) => NotificationScreen())));
-                        // Navigator.push(context, MaterialPageRoute(builder:(context){
-                        //       //  return screens[index];
-                        //  }));
+                       
                       },
                       trailing: Icon(
                         Icons.arrow_forward_ios,

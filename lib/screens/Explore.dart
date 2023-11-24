@@ -15,7 +15,7 @@ final expcarousel = [
   'assets/expl-1.jpg',
   'assets/expl-2.jpg'
 ];
-final expsl = ['assets/luxe.png', 'assets/AZRT.png', 'assets/Gap.png'];
+final slid2 = ['assets/luxe.png', 'assets/AZRT.png', 'assets/Gap.png'];
 final slid3 = ['assets/img1.png', 'assets/img2.png', 'assets/img3.png'];
 final grid = [
   'assets/expl-1.jpg',
@@ -29,7 +29,8 @@ class _ExplorepageState extends State<Explorepage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: buildAppbar(),
+        appBar: 
+        buildAppbar(BuildContext),
         body: SingleChildScrollView(
           child: Column(
             children: [
@@ -120,9 +121,9 @@ class _ExplorepageState extends State<Explorepage> {
                       ],
                     ),
                     CarouselSlider.builder(
-                        itemCount: expsl.length,
+                        itemCount: slid2.length,
                         itemBuilder: (context, index, realIndex) {
-                          final imagePath = expsl[index];
+                          final imagePath = slid2[index];
                           return buildImage(imagePath, index);
                         },
                         options: CarouselOptions(

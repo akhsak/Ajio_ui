@@ -20,36 +20,44 @@ class _HomepageState extends State<Homepage> {
   ];
   @override
   Widget build(BuildContext context) {
+    
+    var screensize = MediaQuery.of(context).size;
+
     return Scaffold(
       body: SingleChildScrollView(
         child: Column(
           children: [
-            buildAppbar(),
+            buildAppbar(context),
             SingleChildScrollView(
               scrollDirection: Axis.horizontal,
             ),
             buildHomeScrollBar(),
             Container(
               width: double.infinity,
-              height: 50,
+              height: 100,
               child: Image.asset('assets/days.jpg'),
             ),
             CarouselSlider.builder(
-                itemCount: carouselImage.length,
-                itemBuilder: (context, index, realIndex) {
-                  final imagePath = carouselImage[index];
-                  return buildImage(imagePath, index);
+              itemCount: carouselImage.length,
+              itemBuilder: (context, index, realIndex) {
+                final imagePath = carouselImage[index];
+                return SizedBox(
+                  width: double.infinity,
+                
+                  child: buildImage(imagePath, index,),
+                );
+              },
+              options: CarouselOptions(
+               height: screensize.width * 0.6,
+                autoPlay: true,
+                viewportFraction: 1,
+                onPageChanged: (index, reason) {
+                  setState(() {
+                    activeindex = index;
+                  });
                 },
-                options: CarouselOptions(
-                  height: 280,
-                  autoPlay: true,
-                  viewportFraction: 1,
-                  onPageChanged: (index, reason) {
-                    setState(() {
-                      activeindex = index;
-                    });
-                  },
-                )),
+              ),
+            ),
             Image.asset('assets/frnt.jpg'),
             SingleChildScrollView(
               scrollDirection: Axis.horizontal,
@@ -69,57 +77,57 @@ class _HomepageState extends State<Homepage> {
                   Image.asset('assets/indsuld.jpg', height: 70, width: 300),
                   Image.asset('assets/fi.jpg', height: 70, width: 300),
                   Image.asset('assets/kwik.jpg', height: 70, width: 300),
-                  Image.asset('assets/payup.jpg', height: 70, width: 300)
+                  Image.asset('assets/payup.jpg', height: 70, width: 300),
                 ],
               ),
             ),
-             Container(
+            Container(
               width: double.infinity,
-              height: 40,
+              height: 100,
               child: Image.asset('assets/charts.png'),
             ),
             SingleChildScrollView(
               scrollDirection: Axis.horizontal,
-            child: Row(
-              children: [
-                Image.asset('assets/1min.png',width: 250,),
-                Image.asset('assets/min 1.png',width: 250,),
-                Image.asset('assets/min3.png',width:250),
-                Image.asset('assets/min4.png',width: 250,)
-              ],
+              child: Row(
+                children: [
+                  Image.asset('assets/1min.png', width: 250,),
+                  Image.asset('assets/min 1.png', width: 250,),
+                  Image.asset('assets/min3.png', width: 250),
+                  Image.asset('assets/min4.png', width: 250),
+                ],
+              ),
             ),
-            ),         
-             Container(
-                  child: Image.asset('assets/deals.png'),
-
-                ),
+            Container(
+              child: Image.asset('assets/deals.png'),
+            ),
             CarouselSlider.builder(
-                itemCount:  carouselImage.length, 
-                itemBuilder: (context,index,realIndex){
-                   final imagePath = carouselImage[index];
-                  return buildImage(imagePath, index);
+              itemCount: carouselImage.length,
+              itemBuilder: (context, index, realIndex) {
+                final imagePath = carouselImage[index];
+                return buildImage(imagePath, index);
+              },
+              options: CarouselOptions(
+                height: 280,
+                autoPlay: true,
+                viewportFraction: 1,
+                onPageChanged: (index, reason) {
+                  setState(() {
+                    activeindex = index;
+                  });
                 },
-                
-                  options: CarouselOptions(
-                  height: 280,
-                  autoPlay: true,
-                  viewportFraction: 1,
-                  onPageChanged: (index, reason) {
-                    setState(() {
-                      activeindex = index;
-                    });
-                  },
-                )),          
+              ),
+            ),
           ],
         ),
       ),
     );
   }
+
   Widget buildImage(String imagepath, int index) => Container(
-        color: Colors.grey,
-        child: Image.asset(
-          imagepath,
-          fit: BoxFit.fill,
-        ),
-      );
+    color: Colors.grey,
+    child: Image.asset(
+      imagepath,
+      fit: BoxFit.fill,
+    ),
+  );
 }

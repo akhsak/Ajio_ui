@@ -60,12 +60,29 @@ class Categoriespage extends StatelessWidget {
                       Name[index],
                       style: TextStyle(
                         fontWeight: FontWeight.bold,
+                         fontSize: MediaQuery.of(context).size.width >
+                                        600
+                                    ? 20
+                                    : MediaQuery.of(context).size.width > 300
+                                        ? 14
+                                        : MediaQuery.of(context).size.width >
+                                                250
+                                            ? 8
+                                            : 2,
+                              ),
                       ),
-                    ),
+                  
+         
                     Image.asset(
                      images[index],
                       width: 50,
-                      height: 50,
+                       height: MediaQuery.of(context).size.width > 600
+                              ? 200
+                              : MediaQuery.of(context).size.width > 400
+                                  ? 100
+                                  : MediaQuery.of(context).size.width > 200
+                                      ? 50
+                                      : 0,
                     ),
                   ],
                 ),
