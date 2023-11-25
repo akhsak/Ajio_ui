@@ -20,8 +20,19 @@ class Accountpage extends StatelessWidget {
     'Join Our Team'
   ];
    final screens = [
+    EmptyScreen(title: 'Customer Care'),
+    EmptyScreen(title: 'Invite Friends & Earn'),
+    EmptyScreen(title: 'Coupon Quest'),
     NotificationScreen(),
-   ];
+     EmptyScreen(title: 'Return Creation Demo'),
+    EmptyScreen(title: 'How To Return'),
+    EmptyScreen(title: 'How Do I Redeem My Coupon?'),
+    EmptyScreen(title: 'Terms & Conditions'),
+    EmptyScreen(title: 'Promotions & Refunds Policy'),
+    EmptyScreen(title: 'Fee & Payment'),
+    EmptyScreen(title: 'Who We Are'),
+    EmptyScreen(title: 'Join Our Team'),
+    ];
 
   @override
   Widget build(BuildContext context) {
@@ -83,10 +94,13 @@ class Accountpage extends StatelessWidget {
                 physics: NeverScrollableScrollPhysics(),
                 itemBuilder: (context, index) => ListTile(
                       onTap: () {
-                        Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                                builder: ((context) => NotificationScreen())));
+                        Navigator.push(context, MaterialPageRoute(builder: (context){
+                          return screens[index];
+                        }));
+                        // Navigator.push(
+                        //     context,
+                        //     MaterialPageRoute(
+                        //         builder: ((context) =>NotificationScreen())));
                        
                       },
                       trailing: Icon(

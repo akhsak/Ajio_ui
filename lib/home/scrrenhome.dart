@@ -26,7 +26,7 @@ class _bottombarState extends State<bottombar> {
     Homepage(),
     Explorepage(),
     Trndpage(),
-    Categoriespage(),
+    CategoriesPage(),
     Accountpage(),
   
   ];

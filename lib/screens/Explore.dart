@@ -26,8 +26,11 @@ final grid = [
   'assets/expl-2.jpg'
 ];
 class _ExplorepageState extends State<Explorepage> {
+
   @override
   Widget build(BuildContext context) {
+    var screenssize = MediaQuery.of(context).size;
+
     return Scaffold(
         appBar: 
         buildAppbar(BuildContext),
@@ -42,7 +45,8 @@ class _ExplorepageState extends State<Explorepage> {
                     return buildImage(imagePath, index);
                   },
                   options: CarouselOptions(
-                    height: 250,
+                   // height: 250,
+                  height: screenssize.width * 0.6,
                     autoPlay: true,
                     viewportFraction: 1,
                     onPageChanged: (index, reason) {
@@ -127,7 +131,8 @@ class _ExplorepageState extends State<Explorepage> {
                           return buildImage(imagePath, index);
                         },
                         options: CarouselOptions(
-                          height: 110,
+                         height: screenssize.width * 0.6,
+                       //   height: 110,
                           autoPlay: true,
                           viewportFraction: 1,
                           onPageChanged: (index, reason) {
@@ -146,7 +151,8 @@ class _ExplorepageState extends State<Explorepage> {
                         return buildImage(imagePath, index);
                       },
                       options: CarouselOptions(
-                        height: 250,
+                       // height: 250,
+                      height: screenssize.width * 0.6,
                         enlargeCenterPage: true,
                         viewportFraction: 1,
                       ),

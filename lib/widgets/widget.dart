@@ -68,16 +68,13 @@ import 'package:flutter/material.dart';
 }
 
 Widget buildHomeScrollBar() {
+  
   return Container(
     height: 50,
     decoration: BoxDecoration(
       color: Colors.white,
       boxShadow: [
-        BoxShadow(
-          color: Colors.black,
-          offset: Offset(0, 4),
-          blurRadius: 15,
-        ),
+      
       ],
     ),
     child: SingleChildScrollView(
@@ -108,7 +105,7 @@ Widget buildHomeScrollBar() {
           ),
           CircleAvatar(
             backgroundImage: NetworkImage(
-                'https://images.picxy.com/cache/2019/1/3/6993406ccf641d493dd1276bcfab77cb.jpg'),
+                'assets/mens.jpg'),
             radius: 15,
           ),
           SizedBox(
@@ -124,7 +121,7 @@ Widget buildHomeScrollBar() {
           ),
           CircleAvatar(
             backgroundImage: NetworkImage(
-                'https://img.freepik.com/premium-photo/beautiful-asian-woman-carrying-colorful-bags-shopping-online-with-mobile-phone_8087-3877.jpg'),
+                'assets/women.jpg'),
             radius: 15,
           ),
           SizedBox(

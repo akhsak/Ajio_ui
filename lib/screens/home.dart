@@ -83,17 +83,20 @@ class _HomepageState extends State<Homepage> {
             ),
             Container(
               width: double.infinity,
-              height: 100,
+             height: 100,
+            // height: screensize.width * 0.6,
               child: Image.asset('assets/charts.png'),
             ),
             SingleChildScrollView(
-              scrollDirection: Axis.horizontal,
+              scrollDirection: Axis.horizontal, 
               child: Row(
+                
                 children: [
-                  Image.asset('assets/1min.png', width: 250,),
-                  Image.asset('assets/min 1.png', width: 250,),
-                  Image.asset('assets/min3.png', width: 250),
-                  Image.asset('assets/min4.png', width: 250),
+                  Image.asset('assets/1min.png', width: 300,),
+                  Image.asset('assets/min 1.png', width: 300,),
+                  Image.asset('assets/min3.png', width: 300),
+                  Image.asset('assets/min4.png', width: 300),
+                  
                 ],
               ),
             ),
@@ -107,7 +110,7 @@ class _HomepageState extends State<Homepage> {
                 return buildImage(imagePath, index);
               },
               options: CarouselOptions(
-                height: 280,
+             height: screensize.width * 0.6,
                 autoPlay: true,
                 viewportFraction: 1,
                 onPageChanged: (index, reason) {
