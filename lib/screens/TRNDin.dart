@@ -5,7 +5,7 @@ import 'dart:ui';
 
 class Trndpage extends StatelessWidget {
   Trndpage({super.key});
-  int slid = 0;
+  
   final slideimage = [
     'assets/trnd2-1.jpg',
     'assets/trnd2-2.jpg',
