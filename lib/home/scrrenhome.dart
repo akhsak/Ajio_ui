@@ -41,7 +41,7 @@ class _bottombarState extends State<bottombar> {
         unselectedItemColor: Colors.black,
         selectedFontSize: 10,
         unselectedFontSize: 10,
-        showUnselectedLabels: true,
+        //showUnselectedLabels: true,
         onTap: navigatebottombar,
         currentIndex: _myIndex,
         items: [

@@ -1,4 +1,5 @@
-
+import 'package:ajio/home/notification.dart';
+import 'package:ajio/home/wishlist.dart';
 import 'package:flutter/material.dart';
 
 class CategoriesPage extends StatelessWidget {
@@ -40,7 +41,12 @@ class CategoriesPage extends StatelessWidget {
         backgroundColor: Colors.white,
         actions: [
           IconButton(
-            onPressed: () {},
+            onPressed: () {
+              Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                      builder: (context) => wishlist()));
+            },
             icon: Icon(Icons.favorite_outline_sharp),
             color: Colors.black,
           ),
@@ -116,8 +122,8 @@ class CategoriesPage extends StatelessWidget {
                 children: [
                   Image.asset(
                     'assets/ajio_luxe.jpg',
-                  height: 100,
-                    width: MediaQuery.of(context).size.width*0.8,
+                    height: 100,
+                    width: MediaQuery.of(context).size.width * 0.8,
                     fit: BoxFit.fill,
                   ),
                 ],

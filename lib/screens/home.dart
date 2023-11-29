@@ -20,7 +20,6 @@ class _HomepageState extends State<Homepage> {
   ];
   @override
   Widget build(BuildContext context) {
-    
     var screensize = MediaQuery.of(context).size;
 
     return Scaffold(
@@ -43,12 +42,14 @@ class _HomepageState extends State<Homepage> {
                 final imagePath = carouselImage[index];
                 return SizedBox(
                   width: double.infinity,
-                
-                  child: buildImage(imagePath, index,),
+                  child: buildImage(
+                    imagePath,
+                    index,
+                  ),
                 );
               },
               options: CarouselOptions(
-               height: screensize.width * 0.6,
+                height: screensize.width * 0.6,
                 autoPlay: true,
                 viewportFraction: 1,
                 onPageChanged: (index, reason) {
@@ -83,20 +84,23 @@ class _HomepageState extends State<Homepage> {
             ),
             Container(
               width: double.infinity,
-             height: 100,
-            // height: screensize.width * 0.6,
+              height: 100,
               child: Image.asset('assets/charts.png'),
             ),
             SingleChildScrollView(
-              scrollDirection: Axis.horizontal, 
+              scrollDirection: Axis.horizontal,
               child: Row(
-                
                 children: [
-                  Image.asset('assets/1min.png', width: 300,),
-                  Image.asset('assets/min 1.png', width: 300,),
+                  Image.asset(
+                    'assets/1min.png',
+                    width: 300,
+                  ),
+                  Image.asset(
+                    'assets/min 1.png',
+                    width: 300,
+                  ),
                   Image.asset('assets/min3.png', width: 300),
                   Image.asset('assets/min4.png', width: 300),
-                  
                 ],
               ),
             ),
@@ -107,10 +111,11 @@ class _HomepageState extends State<Homepage> {
               itemCount: carouselImage.length,
               itemBuilder: (context, index, realIndex) {
                 final imagePath = carouselImage[index];
-                return buildImage(imagePath, index);
+                return 
+                buildImage(imagePath, index);
               },
               options: CarouselOptions(
-             height: screensize.width * 0.6,
+                height: screensize.width * 0.7,
                 autoPlay: true,
                 viewportFraction: 1,
                 onPageChanged: (index, reason) {
@@ -127,10 +132,10 @@ class _HomepageState extends State<Homepage> {
   }
 
   Widget buildImage(String imagepath, int index) => Container(
-    color: Colors.grey,
-    child: Image.asset(
-      imagepath,
-      fit: BoxFit.fill,
-    ),
-  );
+        color: Colors.grey,
+        child: Image.asset(
+          imagepath,
+          fit: BoxFit.fill,
+        ),
+      );
 }

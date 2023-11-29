@@ -8,7 +8,7 @@ class Explorepage extends StatefulWidget {
   @override
   State<Explorepage> createState() => _ExplorepageState();
 }
-int exp = 0;
+
 final expcarousel = [
   'assets/expl-1.jpg',
   'assets/expl-2.jpg',
@@ -25,19 +25,18 @@ final grid = [
   'assets/expl-2.jpg',
   'assets/expl-2.jpg'
 ];
-class _ExplorepageState extends State<Explorepage> {
 
+class _ExplorepageState extends State<Explorepage> {
   @override
   Widget build(BuildContext context) {
     var screenssize = MediaQuery.of(context).size;
 
     return Scaffold(
-        appBar: 
-        buildAppbar(BuildContext),
+        appBar: buildAppbar(BuildContext),
         body: SingleChildScrollView(
           child: Column(
             children: [
-              Image.asset('assets/fashionjpg.PNG'),
+              Image.asset('assets/fashionjpg.PNG',height: 130,width: double.infinity,fit: BoxFit.fill,),
               CarouselSlider.builder(
                   itemCount: expcarousel.length,
                   itemBuilder: (context, index, realIndex) {
@@ -45,15 +44,10 @@ class _ExplorepageState extends State<Explorepage> {
                     return buildImage(imagePath, index);
                   },
                   options: CarouselOptions(
-                   // height: 250,
-                  height: screenssize.width * 0.6,
+                    height: screenssize.width * 0.6,
                     autoPlay: true,
                     viewportFraction: 1,
-                    onPageChanged: (index, reason) {
-                      setState(() {
-                        exp = index;
-                      });
-                    },
+                    onPageChanged: (index, reason) {},
                   )),
               SingleChildScrollView(
                 scrollDirection: Axis.vertical,
@@ -131,15 +125,10 @@ class _ExplorepageState extends State<Explorepage> {
                           return buildImage(imagePath, index);
                         },
                         options: CarouselOptions(
-                         height: screenssize.width * 0.6,
-                       //   height: 110,
+                          height: screenssize.width * 0.6,
                           autoPlay: true,
                           viewportFraction: 1,
-                          onPageChanged: (index, reason) {
-                            setState(() {
-                              exp = index;
-                            });
-                          },
+                          onPageChanged: (index, reason) {},
                         )),
                     Image(
                       image: AssetImage('assets/festiv.png'),
@@ -151,8 +140,7 @@ class _ExplorepageState extends State<Explorepage> {
                         return buildImage(imagePath, index);
                       },
                       options: CarouselOptions(
-                       // height: 250,
-                      height: screenssize.width * 0.6,
+                        height: screenssize.width * 0.6,
                         enlargeCenterPage: true,
                         viewportFraction: 1,
                       ),
@@ -189,6 +177,7 @@ class _ExplorepageState extends State<Explorepage> {
           ),
         ));
   }
+
   Widget buildImage(String imagepath, int index) => Container(
         width: double.infinity,
         color: Colors.grey,

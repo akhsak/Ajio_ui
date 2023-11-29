@@ -2,7 +2,8 @@ import 'package:ajio/home/bag.dart';
 import 'package:ajio/home/notification.dart';
 import 'package:ajio/home/wishlist.dart';
 import 'package:flutter/material.dart';
- buildAppbar( context) {
+
+buildAppbar(context) {
   return AppBar(
     elevation: 0,
     backgroundColor: Colors.white,
@@ -41,7 +42,8 @@ import 'package:flutter/material.dart';
     actions: [
       IconButton(
         onPressed: () {
-          Navigator.push(context, MaterialPageRoute(builder: (context)=>NotificationScreen()));
+          Navigator.push(context,
+              MaterialPageRoute(builder: (context) => NotificationScreen()));
         },
         icon: Icon(Icons.notifications_none_outlined),
         color: Colors.black,
@@ -55,11 +57,10 @@ import 'package:flutter/material.dart';
         color: Colors.black,
       ),
       IconButton(
-         onPressed: () {
-          Navigator.push(context,(MaterialPageRoute(builder: (context)=>Bagpage())
-            
-          ));
-         },
+        onPressed: () {
+          Navigator.push(
+              context, (MaterialPageRoute(builder: (context) => Bagpage())));
+        },
         icon: Icon(Icons.shopping_bag_outlined),
         color: Colors.black,
       ),
@@ -68,14 +69,11 @@ import 'package:flutter/material.dart';
 }
 
 Widget buildHomeScrollBar() {
-  
   return Container(
     height: 50,
     decoration: BoxDecoration(
       color: Colors.white,
-      boxShadow: [
-      
-      ],
+      boxShadow: [],
     ),
     child: SingleChildScrollView(
       scrollDirection: Axis.horizontal,
@@ -104,8 +102,7 @@ Widget buildHomeScrollBar() {
             width: 12,
           ),
           CircleAvatar(
-            backgroundImage: NetworkImage(
-                'assets/mens.jpg'),
+            backgroundImage: NetworkImage('assets/mens.jpg'),
             radius: 15,
           ),
           SizedBox(
@@ -120,8 +117,7 @@ Widget buildHomeScrollBar() {
             width: 12,
           ),
           CircleAvatar(
-            backgroundImage: NetworkImage(
-                'assets/women.jpg'),
+            backgroundImage: NetworkImage('assets/women.jpg'),
             radius: 15,
           ),
           SizedBox(

@@ -19,12 +19,12 @@ class Accountpage extends StatelessWidget {
     'Who We Are',
     'Join Our Team'
   ];
-   final screens = [
+  final screens = [
     EmptyScreen(title: 'Customer Care'),
     EmptyScreen(title: 'Invite Friends & Earn'),
     EmptyScreen(title: 'Coupon Quest'),
     NotificationScreen(),
-     EmptyScreen(title: 'Return Creation Demo'),
+    EmptyScreen(title: 'Return Creation Demo'),
     EmptyScreen(title: 'How To Return'),
     EmptyScreen(title: 'How Do I Redeem My Coupon?'),
     EmptyScreen(title: 'Terms & Conditions'),
@@ -32,7 +32,7 @@ class Accountpage extends StatelessWidget {
     EmptyScreen(title: 'Fee & Payment'),
     EmptyScreen(title: 'Who We Are'),
     EmptyScreen(title: 'Join Our Team'),
-    ];
+  ];
 
   @override
   Widget build(BuildContext context) {
@@ -50,7 +50,7 @@ class Accountpage extends StatelessWidget {
             Container(
               color: Color.fromARGB(255, 238, 233, 233),
               child: Row(
-                children: [               
+                children: [
                   SizedBox(
                     width: 20,
                     height: 150,
@@ -76,10 +76,10 @@ class Accountpage extends StatelessWidget {
                           onPressed: () {},
                           child: Text('Sign in/ join'),
                           style: ButtonStyle(
-                              backgroundColor:
-                                  MaterialStateProperty.all<Color>(Colors.black),
-                              shape:
-                                  MaterialStateProperty.all(RoundedRectangleBorder(
+                              backgroundColor: MaterialStateProperty.all<Color>(
+                                  Colors.black),
+                              shape: MaterialStateProperty.all(
+                                  RoundedRectangleBorder(
                                 borderRadius: BorderRadius.circular(5),
                               ))),
                         ),
@@ -94,13 +94,10 @@ class Accountpage extends StatelessWidget {
                 physics: NeverScrollableScrollPhysics(),
                 itemBuilder: (context, index) => ListTile(
                       onTap: () {
-                        Navigator.push(context, MaterialPageRoute(builder: (context){
+                        Navigator.push(context,
+                            MaterialPageRoute(builder: (context) {
                           return screens[index];
                         }));
-                        // Navigator.push(
-                        //     context,
-                        //     MaterialPageRoute(
-                        //         builder: ((context) =>NotificationScreen())));
                        
                       },
                       trailing: Icon(
@@ -115,14 +112,17 @@ class Accountpage extends StatelessWidget {
                     ),
                 separatorBuilder: (context, index) => Divider(),
                 itemCount: list.length),
-                SizedBox(
-                  height: 10,
-                  width: 50,
-                ),
-                Text('version 9.4.0 Build 3085',style: TextStyle(color: Color.fromARGB(255, 148, 146, 146)),),
-                SizedBox(
-                  height: 10,
-                )
+            SizedBox(
+              height: 10,
+              width: 50,
+            ),
+            Text(
+              'version 9.4.0 Build 3085',
+              style: TextStyle(color: Color.fromARGB(255, 148, 146, 146)),
+            ),
+            SizedBox(
+              height: 10,
+            )
           ],
         ),
       ),
